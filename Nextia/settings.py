@@ -48,8 +48,15 @@ LOCAL_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    'rest_framework',
+    'rest_framework', #Django REST Framework
+    'rest_framework_simplejwt', #JWT Plugin
 ]
+
+REST_FRAMEWORK = {  
+    'DEFAULT_AUTHENTICATION_CLASSES': [  
+        'rest_framework_simplejwt.authentication.JWTAuthentication',  
+    ],
+} 
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
