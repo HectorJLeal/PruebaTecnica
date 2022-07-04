@@ -1,3 +1,4 @@
+-------------------------------------------------------- ASPECTOS TECNICOS ------------------------------------------------------------------------------
 #Para la siguiente prueba se utilizaron los siguientes elementos:
 
 asgiref==3.5.2
@@ -23,3 +24,16 @@ Puerto: 5432
 Usuario: Hector
 mail: contacto@hectorjleal.com
 Contraseña: Prueba
+-------------------------------------------------------- DETALLES ------------------------------------------------------------------------------
+#Puntos cubiertos 
+Creación del proyecto y configuración
+Creación del modelo “Base”
+Generación del modelo Users que hereda de Base
+Creación de modelo llamado Bienes que hereda de BaseModel y relación al modelo Users (usuario_id)
+
+#Faltantes
+Endpoints y lógica para autenticación de usuarios 
+Script de registro de usuarios 
+Endpoint SCRUD para modelo de bienes
+Endpoint para Bienes (Envio de múltiples Ids)
+
