@@ -7,30 +7,30 @@ class FormularioRegistro(forms.ModelForm):
         
         model = Users
         fields = (
-            'Nombre',
-            'Users',
-            'Contraseña',
+            'name',
+            'user',
+            'password',
         )
 
         widgets = {
-            'Nombre': forms.TextInput(
+            'name': forms.TextInput(
                 attrs= {
                     'placeholder': 'Ingrese texto',
                     'class': 'campo',
                 }
             ),
-            'Users': forms.TextInput(
+            'user': forms.TextInput(
                 attrs= {
                     'class': 'campo',
                 }
             ),
-            'Contraseña': forms.PasswordInput(
+            'password': forms.PasswordInput(
                 attrs= {
                     'class': 'campo',
                 }
             )
         }
     def clean_nombre(self):
-        nombre = self.cleaned_data.get('Nombre')
-
+        nombre = self.cleaned_data.get('name')
+    
         return nombre

@@ -7,7 +7,7 @@ class Base(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.id)+' - '+str(self.created_at)
+        return self.id
 
 class Users(Base):
     name = models.CharField('Nombre',max_length=50)
@@ -17,3 +17,11 @@ class Users(Base):
 
     def __str__(self):
         return self.name
+
+class Bienes(Base):
+    articulo = models.CharField('Articulo',max_length=255)
+    descripcion = models.CharField('Descripción',max_length=255)
+    usuario_id = models.ForeignKey(Users, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.articulo

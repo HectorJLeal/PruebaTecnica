@@ -2,12 +2,32 @@
 <html lang="es">
     <head>
         <title>Registrar Usuario</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+            }
+            .contenedor{
+                background-color: black;
+                color: white;
+                padding: 50px;
+            }
+            .contenedor h1{
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            
+        </style>
     </head>
     <body>
-        <h1>Formulario para registrar usuario</h1>
-        <form method="post">{% csrf_token %}
-            {{ form.as_p }}
-        </form>
-        <button type="submit"> Registrar Usuario </button>
+        <div class="contenedor">
+            <h1>Formulario para registrar usuario</h1>
+            <form method="post">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit"> Registrar Usuario </button>
+            </form>
+        </div>      
     </body>
 </html>
